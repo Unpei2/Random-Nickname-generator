@@ -4,15 +4,19 @@ let dis = document.getElementById("display")
 random.addEventListener("click", randomname)
 all.addEventListener("click", allnames)
 
-let nicknames = [" Twinkle Toes ", " Crusher ", " the Scientist ", " The Coder "," the Sloth "]
+let nicknames = [" Twinkle Toes ", " Crusher ", " the Scientist ", " the Coder "," the Sloth "]
 let asd = 0
 function allnames(){
     let first = document.getElementById("firstname").value
     let last = document.getElementById("lastname").value
-    for (x = 0;x > 5; x++){
-    dis.innerHTML = first + nicknames[x] + last
-    }
+    let words = ""
+    for (x = 0;x<5;x++){
+        console.log(nicknames[x])
+        words += first + nicknames[x] + last + "<br>"
+        dis.innerHTML = words 
+        }        
 }
+
 function randomname(){
     let first = document.getElementById("firstname").value
     let last = document.getElementById("lastname").value
